@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to My Restaurant</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- SCENE 1: KNOCKING THE DOOR -->
+    <!-- ========================= -->
+
+    <div id="knock-container">
+
+        <img id="knock" src="knock.png" alt="Knock on door">
+
+        <img id="knock-sound"
+             src="knock-sound.png"
+             alt="Knock sound">
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SCENE 2: WAITER APPEARS -->
+    <!-- ========================= -->
+
+    <div id="waiter-container">
+
+        <img id="waiter"
+             src="waiter1.png"
+             alt="Restaurant waiter">
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SCENE 3: NAME DIALOGUE -->
+    <!-- ========================= -->
+
+    <div id="name-container" class="dialogue-box">
+
+        <h2>Hello there!</h2>
+
+        <p>May I know your name?</p>
+
+        <input type="text"
+               id="user-name"
+               placeholder="Enter your name">
+
+        <button id="name-submit">
+            Submit
+        </button>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SCENE 4: NAME CONFIRMATION -->
+    <!-- ========================= -->
+
+    <div id="confirm-container" class="dialogue-box">
+
+        <p id="confirm-text"></p>
+
+        <div class="buttons">
+
+            <button id="yes-btn">
+                YES
+            </button>
+
+            <button id="no-btn">
+                NO
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SCENE 5: WELCOME MESSAGE -->
+    <!-- ========================= -->
+
+    <div id="welcome-container" class="dialogue-box">
+
+        <p id="welcome-text"></p>
+
+        <button id="welcome-btn">
+            Continue
+        </button>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SCENE 6: OPEN DOOR -->
+    <!-- ========================= -->
+
+    <div id="door-container">
+
+        <img id="open-door"
+             src="door-open.jpg"
+             alt="Open restaurant door">
+
+        <p>Click the door to enter!</p>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SCENE 7: RESTAURANT -->
+    <!-- ========================= -->
+
+    <div id="restaurant-container">
+
+        <div id="restaurant-dialogue" class="dialogue-box">
+
+            <p>Are you ready for something special?</p>
+
+            <button id="ready-btn">
+                YES!
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SCENE 8: FINAL WAITER -->
+    <!-- ========================= -->
+
+    <div id="final-waiter-container">
+
+        <img id="final-waiter"
+             src="waiter3.png"
+             alt="Special waiter">
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SCENE 9: FIREWORKS -->
+    <!-- ========================= -->
+
+    <div id="firework-container">
+
+        <img id="firework"
+             src="firework.gif"
+             alt="Fireworks">
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SCENE 10: FINAL MESSAGE -->
+    <!-- ========================= -->
+
+    <div id="final-message" class="dialogue-box">
+
+        <h1>Surprise!</h1>
+
+        <p id="ending-text">
+            Thank you for coming!
+        </p>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
