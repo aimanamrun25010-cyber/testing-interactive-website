@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Our Date Tonight ❤️</title>
+
+    <!-- Pixel-art font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===================================== -->
+    <!-- GLOBAL TRANSITION -->
+    <!-- ===================================== -->
+
+    <div id="transition-overlay"></div>
+
+
+    <!-- ===================================== -->
+    <!-- SCENE 1: THE INVITATION -->
+    <!-- ===================================== -->
+
+    <section id="invitation-scene" class="scene active">
+
+        <div id="invitation-card">
+
+            <img src="images/invitation.png"
+                 id="invitation-image"
+                 alt="A special invitation">
+
+            <h1>Our Date Tonight ❤️</h1>
+
+            <p>
+                Hey love! Tonight, we're going
+                on a little adventure.
+            </p>
+
+            <p>
+                I've planned something special,
+                but I need my favourite person
+                to help me finish the plan.
+            </p>
+
+            <p class="privacy-note">
+                Your choices will be saved
+                so I can plan our evening.
+            </p>
+
+            <button id="start-btn">
+                Let's Go! 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- SCENE 2: OUR FIRST STOP -->
+    <!-- ===================================== -->
+
+    <section id="dinner-scene" class="scene">
+
+        <!-- Couple illustration -->
+
+        <div class="couple-container">
+
+            <img src="images/couple-street.png"
+                 id="street-couple"
+                 class="couple-image"
+                 alt="A couple together on a nighttime street">
+
+        </div>
+
+
+        <!-- Story dialogue -->
+
+        <div id="dinner-story"
+             class="story-dialogue">
+
+            <h2>YOU ❤️</h2>
+
+            <p id="dinner-story-text"
+               class="typing-text"></p>
+
+            <button id="dinner-story-next">
+                Continue →
+            </button>
+
+        </div>
+
+
+        <!-- Dinner choices -->
+
+        <div id="dinner-choice-container"
+             class="story-choice-panel">
+
+            <h2>Where shall we eat tonight? 🍽️</h2>
+
+            <p>I've got a few places in mind...</p>
+
+            <div id="dinner-options"
+                 class="choice-grid">
+
+                <button class="choice-card dinner-choice"
+                        data-restaurant="Japanese Food">
+
+                    <img src="images/japanese.png"
+                         alt="Japanese food">
+
+                    <span>Japanese Food 🍣</span>
+
+                </button>
+
+
+                <button class="choice-card dinner-choice"
+                        data-restaurant="Western Food">
+
+                    <img src="images/western.png"
+                         alt="Western food">
+
+                    <span>Western Food 🍝</span>
+
+                </button>
+
+
+                <button class="choice-card dinner-choice"
+                        data-restaurant="Mamak">
+
+                    <img src="images/mamak.png"
+                         alt="Mamak food">
+
+                    <span>Mamak 🍛</span>
+
+                </button>
+
+
+                <button class="choice-card dinner-choice"
+                        data-restaurant="Cafe">
+
+                    <img src="images/cafe.png"
+                         alt="Cafe">
+
+                    <span>Café ☕</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Reaction after selection -->
+
+        <div id="dinner-reaction"
+             class="story-dialogue">
+
+            <h2>YOU ❤️</h2>
+
+            <p id="dinner-reaction-text"
+               class="typing-text"></p>
+
+            <button id="dinner-reaction-next">
+                Let's Imagine It! ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- SCENE 3: IMAGINING OUR DINNER -->
+    <!-- ===================================== -->
+
+    <section id="dinner-moment-scene" class="scene">
+
+        <div class="couple-container">
+
+            <img src="images/couple-dinner.png"
+                 id="dinner-couple"
+                 class="couple-image"
+                 alt="A couple imagining dinner together">
+
+        </div>
+
+
+        <div id="dinner-moment-dialogue"
+             class="story-dialogue">
+
+            <h2>YOU ❤️</h2>
+
+            <p id="dinner-moment-text"
+               class="typing-text"></p>
+
+            <button id="dinner-moment-next">
+                Continue Our Adventure →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- SCENE 4: GETTING READY -->
+    <!-- ===================================== -->
+
+    <section id="outfit-scene" class="scene">
+
+        <div class="couple-container">
+
+            <img src="images/couple-outfit.png"
+                 id="outfit-couple"
+                 class="couple-image"
+                 alt="A couple getting ready">
+
+        </div>
+
+
+        <!-- Outfit story -->
+
+        <div id="outfit-story"
+             class="story-dialogue">
+
+            <h2>YOU ❤️</h2>
+
+            <p id="outfit-story-text"
+               class="typing-text"></p>
+
+            <button id="outfit-story-next">
+                Continue →
+            </button>
+
+        </div>
+
+
+        <!-- Outfit choices -->
+
+        <div id="outfit-choice-container"
+             class="story-choice-panel">
+
+            <h2>What colour are you wearing tonight? 🎨</h2>
+
+            <p>I might just match with you!</p>
+
+
+            <div id="color-options"
+                 class="color-grid">
+
+                <button class="color-choice"
+                        data-color="Black">
+
+                    <span class="color-circle"
+                          style="background-color: #252525;"></span>
+
+                    <span>Black</span>
+
+                </button>
+
+
+                <button class="color-choice"
+                        data-color="White">
+
+                    <span class="color-circle"
+                          style="background-color: #ffffff;"></span>
+
+                    <span>White</span>
+
+                </button>
+
+
+                <button class="color-choice"
+                        data-color="Pink">
+
+                    <span class="color-circle"
+                          style="background-color: #f5a4c5;"></span>
+
+                    <span>Pink</span>
+
+                </button>
+
+
+                <button class="color-choice"
+                        data-color="Blue">
+
+                    <span class="color-circle"
+                          style="background-color: #7da9e8;"></span>
+
+                    <span>Blue</span>
+
+                </button>
+
+
+                <button class="color-choice"
+                        data-color="Red">
+
+                    <span class="color-circle"
+                          style="background-color: #d95965;"></span>
+
+                    <span>Red</span>
+
+                </button>
+
+
+                <button class="color-choice"
+                        data-color="Beige">
+
+                    <span class="color-circle"
+                          style="background-color: #ddc6a5;"></span>
+
+                    <span>Beige</span>
+
+                </button>
+
+            </div>
+
+
+            <!-- Custom colour -->
+
+            <div id="other-color-container">
+
+                <label for="other-color">
+                    Another colour?
+                </label>
+
+                <input type="text"
+                       id="other-color"
+                       placeholder="Type your colour"
+                       maxlength="30">
+
+                <button id="other-color-btn">
+                    Choose This Colour
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Outfit reaction -->
+
+        <div id="outfit-reaction"
+             class="story-dialogue">
+
+            <h2>YOU ❤️</h2>
+
+            <p id="outfit-reaction-text"
+               class="typing-text"></p>
+
+            <button id="outfit-reaction-next">
+                Let's Continue! ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- SCENE 5: ONE MORE STOP -->
+    <!-- ===================================== -->
+
+    <section id="chill-scene" class="scene">
+
+        <div class="couple-container">
+
+            <img src="images/couple-walk.png"
+                 id="walk-couple"
+                 class="couple-image"
+                 alt="A couple walking together at night">
+
+        </div>
+
+
+        <!-- Chill story -->
+
+        <div id="chill-story"
+             class="story-dialogue">
+
+            <h2>YOU ❤️</h2>
+
+            <p id="chill-story-text"
+               class="typing-text"></p>
+
+            <button id="chill-story-next">
+                Continue →
+            </button>
+
+        </div>
+
+
+        <!-- Chill choices -->
+
+        <div id="chill-choice-container"
+             class="story-choice-panel">
+
+            <h2>Where shall we chill tonight? 🌃</h2>
+
+            <p>Let's spend a little more time together.</p>
+
+
+            <div id="chill-options"
+                 class="choice-grid">
+
+                <button class="choice-card chill-choice"
+                        data-chill="Beach">
+
+                    <img src="images/beach.png"
+                         alt="Beach">
+
+                    <span>Beach 🌊</span>
+
+                </button>
+
+
+                <button class="choice-card chill-choice"
+                        data-chill="Coffee Shop">
+
+                    <img src="images/coffee.png"
+                         alt="Coffee shop">
+
+                    <span>Coffee Shop ☕</span>
+
+                </button>
+
+
+                <button class="choice-card chill-choice"
+                        data-chill="City Walk">
+
+                    <img src="images/city.png"
+                         alt="City walk">
+
+                    <span>City Walk 🌙</span>
+
+                </button>
+
+
+                <button class="choice-card chill-choice"
+                        data-chill="Movie">
+
+                    <img src="images/movie.png"
+                         alt="Movie">
+
+                    <span>Movie 🎬</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Chill reaction -->
+
+        <div id="chill-reaction"
+             class="story-dialogue">
+
+            <h2>YOU ❤️</h2>
+
+            <p id="chill-reaction-text"
+               class="typing-text"></p>
+
+            <button id="chill-reaction-next">
+                One More Stop ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- SCENE 6: OUR LITTLE MOMENT -->
+    <!-- ===================================== -->
+
+    <section id="moment-scene" class="scene">
+
+        <div class="couple-container">
+
+            <img src="images/couple-moment.png"
+                 id="moment-couple"
+                 class="couple-image"
+                 alt="A romantic moment together">
+
+        </div>
+
+
+        <div id="moment-dialogue"
+             class="story-dialogue">
+
+            <h2>YOU ❤️</h2>
+
+            <p id="moment-text"
+               class="typing-text"></p>
+
+            <button id="moment-next">
+                Continue ❤️
+            </button>
+
+        </div>
+
+        <div id="moment-hearts"
+             aria-hidden="true"></div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- SCENE 7: HEART MINI-GAME -->
+    <!-- ===================================== -->
+
+    <section id="game-scene" class="scene">
+
+        <!-- Mini-game introduction -->
+
+        <div id="game-intro"
+             class="story-dialogue">
+
+            <h2>YOU ❤️</h2>
+
+            <p id="game-intro-text"
+               class="typing-text"></p>
+
+            <button id="start-game-btn">
+                Let's Play! ❤️
+            </button>
+
+        </div>
+
+
+        <!-- Heart game -->
+
+        <div id="game-container">
+
+            <h2>Catch the Hearts! ❤️</h2>
+
+            <p>Collect five hearts to unlock your surprise.</p>
+
+            <div id="heart-counter"
+                 aria-live="polite">
+
+                Hearts:
+                <span id="heart-count">0</span>/5
+
+            </div>
+
+            <div id="game-area">
+
+                <!-- Falling hearts created by JavaScript -->
+
+            </div>
+
+        </div>
+
+
+        <!-- Mini-game completed -->
+
+        <div id="game-complete"
+             class="story-dialogue">
+
+            <h2>YOU ❤️</h2>
+
+            <p id="game-complete-text"
+               class="typing-text"></p>
+
+            <button id="game-continue-btn">
+                Open My Letter 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- SCENE 8: THE FINAL LETTER -->
+    <!-- ===================================== -->
+
+    <section id="letter-scene" class="scene">
+
+        <!-- Closed envelope -->
+
+        <div id="envelope-container">
+
+            <h2>A Letter for You 💌</h2>
+
+            <img id="envelope-image"
+                 src="images/envelope-closed.png"
+                 alt="Closed love letter">
+
+            <p>Tap the envelope to open it!</p>
+
+        </div>
+
+
+        <!-- Opened letter -->
+
+        <div id="letter-container">
+
+            <img id="opened-envelope"
+                 src="images/envelope-open.png"
+                 alt="Opened envelope">
+
+            <div id="letter-paper">
+
+                <p class="letter-greeting">
+                    To my love,
+                </p>
+
+                <h1 id="final-letter-text">
+                    great choices!, see you tonight, love!.
+                </h1>
+
+                <p class="letter-signature">
+                    With love, ❤️
+                </p>
+
+            </div>
+
+            <button id="replay-btn">
+                Play Again ↻
+            </button>
+
+        </div>
+
+
+        <!-- Floating hearts -->
+
+        <div id="floating-hearts"
+             aria-hidden="true"></div>
+
+    </section>
+
+
+    <!-- ===================================== -->
+    <!-- BACKGROUND MUSIC AND SOUND EFFECTS -->
+    <!-- ===================================== -->
+
+    <audio id="background-music"
+           src="audio/background.mp3"
+           loop></audio>
+
+    <audio id="click-audio"
+           src="audio/click.mp3"></audio>
+
+    <audio id="heart-audio"
+           src="audio/heart.mp3"></audio>
+
+    <audio id="letter-audio"
+           src="audio/letter.mp3"></audio>
+
+
+    <!-- ===================================== -->
+    <!-- MUSIC CONTROL -->
+    <!-- ===================================== -->
+
+    <button id="music-toggle"
+            type="button"
+            aria-label="Toggle background music">
+        🔊
+    </button>
+
+
+    <!-- ===================================== -->
+    <!-- RESPONSE SAVE STATUS -->
+    <!-- ===================================== -->
+
+    <div id="save-status"
+         role="status"
+         aria-live="polite"></div>
+
+
+    <!-- ===================================== -->
+    <!-- JAVASCRIPT -->
+    <!-- ===================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
