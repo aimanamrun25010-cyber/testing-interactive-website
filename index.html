@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#14102d" />
+  <meta name="description" content="A tiny interactive love story for tonight. 💗" />
+  <title>Untuk Cinta Hati Saya 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body data-scene="1">
+  <!-- Decorative stars shared by the night scenes -->
+  <div class="night-sky" aria-hidden="true">
+    <div class="stars" id="stars"></div>
+    <div class="moon"></div>
+    <div class="sky-glow sky-glow--one"></div>
+    <div class="sky-glow sky-glow--two"></div>
+  </div>
+
+  <!-- SCENE 1: white background + beating clickable heart -->
+  <main id="scene1" class="scene scene--welcome active" aria-hidden="false">
+    <div class="welcome-content">
+      <p class="eyebrow welcome-eyebrow">a little something, just for you</p>
+      <button id="heartEnter" class="heart-button" type="button" aria-label="Tekan hati untuk mula">
+        <svg class="heart-svg" viewBox="0 0 120 108" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="heartGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ff9ab7" />
+              <stop offset="55%" stop-color="#ff4e86" />
+              <stop offset="100%" stop-color="#de2869" />
+            </linearGradient>
+          </defs>
+          <path d="M60 102 C48 92 8 64 8 35 C8 18 22 6 39 6 C48 6 56 10 60 18 C65 10 72 6 82 6 C99 6 112 18 112 35 C112 65 72 92 60 102Z" fill="url(#heartGradient)" />
+          <path d="M26 25 C30 16 40 13 46 16" fill="none" stroke="#fff" opacity=".55" stroke-width="7" stroke-linecap="round" />
+        </svg>
+        <span class="heart-ring heart-ring--one"></span>
+        <span class="heart-ring heart-ring--two"></span>
+      </button>
+      <h1>Untuk cinta hati saya <span aria-hidden="true">♡</span></h1>
+      <p class="welcome-subtitle">Ada sesuatu saya nak cakap...</p>
+      <p class="tap-hint">tap the heart to begin <span aria-hidden="true">✦</span></p>
+    </div>
+  </main>
+
+  <!-- SCENE 2: messages + portrait on the left -->
+  <section id="scene2" class="scene scene--night" aria-hidden="true" aria-labelledby="title2">
+    <div class="story-layout story-layout--portrait">
+      <aside class="portrait-column">
+        <div class="portrait-frame photo-frame" id="portraitFrame">
+          <!-- Replace assets/portrait.jpg with your own picture -->
+          <img src="assets/portrait.jpg" alt="Gambar saya" class="photo-image" id="portraitImage" />
+          <div class="photo-placeholder" aria-hidden="true">
+            <span class="placeholder-sparkle">✧ &nbsp; ✦ &nbsp; ✧</span>
+            <span class="placeholder-person">🧑🏻‍💼</span>
+            <span class="placeholder-caption">Your portrait goes here</span>
+            <span class="placeholder-filename">assets/portrait.jpg</span>
+          </div>
+          <div class="portrait-heart" aria-hidden="true">♥</div>
+        </div>
+        <div class="portrait-caption">a message from me, to you <span aria-hidden="true">✿</span></div>
+      </aside>
+      <div class="chat-panel glass-panel">
+        <p class="eyebrow">CHAPTER 01 <span aria-hidden="true">·</span> HELLO, LOVE</p>
+        <h2 id="title2">Hai, sayang <span class="heading-heart" aria-hidden="true">♥</span></h2>
+        <p class="panel-intro">Saya ada something nak tanya...</p>
+        <div class="chat-messages" id="messages2" role="log" aria-live="polite" aria-relevant="additions"></div>
+        <div class="choices" id="choices2" aria-label="Pilihan jawapan"></div>
+        <p class="note small-note">✧ Pilihan makan &amp; warna awak disimpan untuk plan kita.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 3: dinner choice -->
+  <section id="scene3" class="scene scene--night" aria-hidden="true" aria-labelledby="title3">
+    <div class="story-layout story-layout--center">
+      <div class="glass-panel center-panel">
+        <div class="tiny-illustration" aria-hidden="true">🍽️ <span>✦</span> 🌙</div>
+        <p class="eyebrow">CHAPTER 02 <span aria-hidden="true">·</span> DATE NIGHT</p>
+        <h2 id="title3">Makan apa malam ni?</h2>
+        <p class="panel-intro">Satu malam, banyak kenangan 💗</p>
+        <div class="chat-messages chat-messages--center" id="messages3" role="log" aria-live="polite" aria-relevant="additions"></div>
+        <div class="choices" id="choices3" aria-label="Pilihan makanan"></div>
+        <div id="placeCard" class="place-card" hidden>
+          <div class="place-icon" aria-hidden="true">📍</div>
+          <div>
+            <span class="place-label">OUR DINNER PLAN</span>
+            <strong id="placeName">Tempat makan pilihan kita</strong>
+          </div>
+        </div>
+        <p class="note">✧ Apa pun pilihan awak, yang penting kita bersama.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 4: clothing choice + love reply -->
+  <section id="scene4" class="scene scene--night" aria-hidden="true" aria-labelledby="title4">
+    <div class="story-layout story-layout--center">
+      <div class="glass-panel center-panel">
+        <div class="tiny-illustration" aria-hidden="true">👕 <span>✦</span> 💕</div>
+        <p class="eyebrow">CHAPTER 03 <span aria-hidden="true">·</span> MATCHING OUTFITS</p>
+        <h2 id="title4">Kita matching, okay?</h2>
+        <p class="panel-intro">Biar sweet couple orang bilang, hehe ✨</p>
+        <div class="chat-messages chat-messages--center" id="messages4" role="log" aria-live="polite" aria-relevant="additions"></div>
+        <div class="choices" id="choices4" aria-label="Pilihan warna baju"></div>
+        <form id="otherColorForm" class="other-color-form" hidden>
+          <label for="otherColorInput">Warna apa, baby? 💗</label>
+          <div class="other-color-row">
+            <input id="otherColorInput" name="otherColor" type="text" maxlength="35" placeholder="Contoh: biru, pink..." required autocomplete="off" />
+            <button type="submit" class="choice-btn choice-btn--primary">Confirm ♡</button>
+          </div>
+        </form>
+        <p class="note">✧ Can't wait to see you tonight!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 5: rapidly alternate standing & kissing photo for 10s -->
+  <section id="scene5" class="scene scene--final" aria-hidden="true" aria-labelledby="title5">
+    <div class="final-bokeh final-bokeh--one"></div>
+    <div class="final-bokeh final-bokeh--two"></div>
+    <div class="final-content">
+      <p class="eyebrow">ONE LAST THING...</p>
+      <h2 id="title5">A kiss for my babyy <span aria-hidden="true">💋</span></h2>
+      <div class="animation-stage" aria-label="Animasi saya berdiri dan bagi flying kiss">
+        <div class="kiss-image-frame kiss-frame--standing is-visible photo-frame" id="standingFrame">
+          <!-- Replace assets/standing.jpg with a standing photo -->
+          <img src="assets/standing.jpg" alt="Saya berdiri" class="photo-image" id="standingImage" />
+          <div class="photo-placeholder" aria-hidden="true">
+            <span class="placeholder-person placeholder-person--large">🧍🏻‍♂️</span>
+            <span class="placeholder-caption">Standing photo</span>
+            <span class="placeholder-filename">assets/standing.jpg</span>
+          </div>
+        </div>
+        <div class="kiss-image-frame kiss-frame--kiss photo-frame" id="kissFrame">
+          <!-- Replace assets/kiss.jpg with a kissing photo -->
+          <img src="assets/kiss.jpg" alt="Saya buat gaya flying kiss" class="photo-image" id="kissImage" />
+          <div class="photo-placeholder" aria-hidden="true">
+            <span class="placeholder-person placeholder-person--large">😘</span>
+            <span class="placeholder-caption">Flying-kiss photo</span>
+            <span class="placeholder-filename">assets/kiss.jpg</span>
+          </div>
+        </div>
+        <div id="kissHearts" class="kiss-hearts" aria-hidden="true"></div>
+      </div>
+      <p class="final-caption">Muah! Muah! Muah! 💗</p>
+    </div>
+    <div id="blackFade" class="black-fade" aria-hidden="true"></div>
+  </section>
+
+  <!-- Notice: the website collects only the selected answers when configured. -->
+</body>
+</html>
