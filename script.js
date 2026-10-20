@@ -7,7 +7,7 @@
    3) Replace the three photos in /assets (see README.md).
    ============================================================ */
 const CONFIG = {
-  sheetsWebAppUrl: 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE',
+  sheetsWebAppUrl: 'https://script.google.com/macros/s/AKfycbyuBCupointfJ3xJVecdAEjboUUrI1TVmaPJirp2-eyVA0hwvEanm9ZFMqOH2ifw4QC/exec',
   restaurantNames: {
     western: 'Kedai western pilihan kita',
     'masakan panas': 'Kedai masakan panas pilihan kita',
