@@ -11,7 +11,7 @@ const CONFIG = {
   restaurantNames: {
     western: 'Western Bites and Grill',
     'masakan panas': 'Muhimeen Tomyam',
-    cafe: 'Muka Coffee',
+    cafe: 'Garage Coffee',
     burger: 'Big Shack Burger',
   },
   messageDelayMs: 660,
