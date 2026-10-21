@@ -9,10 +9,10 @@
 const CONFIG = {
   sheetsWebAppUrl: 'https://script.google.com/macros/s/AKfycbyuBCupointfJ3xJVecdAEjboUUrI1TVmaPJirp2-eyVA0hwvEanm9ZFMqOH2ifw4QC/exec',
   restaurantNames: {
-    western: 'Kedai western pilihan kita',
-    'masakan panas': 'Kedai masakan panas pilihan kita',
-    cafe: 'Cafe pilihan kita',
-    burger: 'Kedai burger pilihan kita',
+    western: 'Western Bites and Grill',
+    'masakan panas': 'Muhimeen Tomyam',
+    cafe: 'Muka Coffee',
+    burger: 'Big Shack Burger',
   },
   messageDelayMs: 660,
   finalPlayDurationMs: 10000,  // 10 seconds of standing / kiss animation
@@ -266,30 +266,49 @@ async function beginScene2() {
 /* ======================== SCENE 3 ======================== */
 async function beginScene3() {
   const token = state.flowToken;
+
   if (!await say(3, 'Disebabkan harini hari special sayang, kita makan and lepak okayy 💕', token)) return;
   if (!await say(3, 'Tapi tak boleh lama-lama, esok kita nak gi Games On pulak 🎮', token)) return;
   if (!await say(3, 'Sayang prefer nak makan apa? 🍽️', token)) return;
+
   state.busy = false;
+
   drawChoices(3, [
     { label: '🥩 Western', value: 'western' },
     { label: '🍲 Masakan panas', value: 'masakan panas' },
     { label: '☕ Cafe', value: 'cafe' },
     { label: '🍔 Burger', value: 'burger' },
   ], async (value, label) => {
+
     state.mealChoice = value;
     addMessage(3, label, 'you');
+
     const now = state.flowToken;
-    if (!await say(3, 'Kalau macam tu jom kita pergi kedai ni! 🥰', now)) return;
-    $('#placeName').textContent = CONFIG.restaurantNames[value] || 'Tempat makan pilihan kita';
+
+    const restaurant = CONFIG.restaurantNames[value];
+
+    if (!await say(
+      3,
+      `Kalau macamtu jom kita pergi ${restaurant} nakk? 😚`,
+      now
+    )) return;
+
+    $('#placeName').textContent = restaurant;
     $('#placeCard').hidden = false;
+
     await wait(340);
     if (now !== state.flowToken) return;
+
     state.busy = false;
-    drawChoices(3, [{ label: 'Jommm! 💞', value: 'jom', primary: true }], () => {
+
+    drawChoices(3, [
+      { label: 'Jommm! 💞', value: 'jom', primary: true }
+    ], () => {
       addMessage(3, 'Jommm! 💞', 'you');
       changeScene(4);
       beginScene4();
     });
+
   });
 }
 
