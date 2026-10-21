@@ -267,8 +267,8 @@ async function beginScene2() {
 async function beginScene3() {
   const token = state.flowToken;
 
-  if (!await say(3, 'Disebabkan harini hari special sayang, kita makan and lepak okayy 💕', token)) return;
-  if (!await say(3, 'Tapi tak boleh lama-lama, esok kita nak gi Games On pulak 🎮', token)) return;
+  if (!await say(3, 'Disebabkan esok hari special sayang, malam ni kita makan and lepak okayy 💕', token)) return;
+  if (!await say(3, 'Tak sabarnyaa nak jumpaa sayangg saya nii, pastu lusa kita gi Games On pulak 🎮. yeayy!', token)) return;
   if (!await say(3, 'Sayang prefer nak makan apa? 🍽️', token)) return;
 
   state.busy = false;
